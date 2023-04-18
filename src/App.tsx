@@ -60,13 +60,11 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
 const Content: FC = () => {
     const { autoConnect, setAutoConnect } = useAutoConnect();
     return (
-        <Stack spacing={2}>
-            <Box        
-            display="flex" 
-            alignItems="center"
-            justifyContent="center">
-                <WalletMultiButton />
-            </Box>
+        <Stack 
+        spacing={1}            
+        alignItems="center"
+        justifyContent="center">
+            <WalletMultiButton />
             <SendTransaction/>
             <TransactionList/>
         </Stack>
