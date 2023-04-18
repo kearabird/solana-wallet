@@ -6802,7 +6802,7 @@ class $ extends (0, _types.ISignClient) {
 }
 const ns = $;
 
-},{"@walletconnect/core":"0PcxV","@walletconnect/logger":"bTcqM","@walletconnect/types":"gLpYu","@walletconnect/utils":"o3k5L","events":"1VQLm","@walletconnect/time":"2hzsP","@walletconnect/jsonrpc-utils":"izCJ8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"0PcxV":[function(require,module,exports) {
+},{"@walletconnect/core":"0PcxV","@walletconnect/logger":"bTcqM","@walletconnect/types":"5ngc4","@walletconnect/utils":"o3k5L","events":"1VQLm","@walletconnect/time":"2hzsP","@walletconnect/jsonrpc-utils":"izCJ8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"0PcxV":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CORE_CONTEXT", ()=>Y);
@@ -8969,7 +8969,7 @@ class J extends (0, _types.ICore) {
 }
 const wr = J;
 
-},{"events":"1VQLm","@walletconnect/keyvaluestorage":"2heaE","@walletconnect/heartbeat":"6G2yQ","@walletconnect/logger":"bTcqM","@walletconnect/types":"1xCHa","@walletconnect/safe-json":"6mDE9","@walletconnect/relay-auth":"1LVbO","@walletconnect/utils":"o3k5L","uint8arrays":"ctPgX","@walletconnect/time":"2hzsP","@walletconnect/jsonrpc-provider":"6zGTK","@walletconnect/jsonrpc-utils":"izCJ8","@walletconnect/jsonrpc-ws-connection":"gsp7F","lodash.isequal":"6emId","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2heaE":[function(require,module,exports) {
+},{"events":"1VQLm","@walletconnect/keyvaluestorage":"2heaE","@walletconnect/heartbeat":"6G2yQ","@walletconnect/logger":"bTcqM","@walletconnect/types":"5ngc4","@walletconnect/safe-json":"6mDE9","@walletconnect/relay-auth":"1LVbO","@walletconnect/utils":"o3k5L","uint8arrays":"ctPgX","@walletconnect/time":"2hzsP","@walletconnect/jsonrpc-provider":"6zGTK","@walletconnect/jsonrpc-utils":"izCJ8","@walletconnect/jsonrpc-ws-connection":"gsp7F","lodash.isequal":"6emId","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2heaE":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -11320,7 +11320,7 @@ function generateChildLogger(logger, childContext, customContextKey = constants_
 }
 exports.generateChildLogger = generateChildLogger;
 
-},{"67cbf2c06e6f1928":"5l237"}],"1xCHa":[function(require,module,exports) {
+},{"67cbf2c06e6f1928":"5l237"}],"5ngc4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ICore", ()=>n);
@@ -20491,116 +20491,7 @@ module.exports = function() {
     throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object");
 };
 
-},{}],"gLpYu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ICore", ()=>n);
-parcelHelpers.export(exports, "ICrypto", ()=>l);
-parcelHelpers.export(exports, "IEngine", ()=>S);
-parcelHelpers.export(exports, "IEngineEvents", ()=>C);
-parcelHelpers.export(exports, "IExpirer", ()=>E);
-parcelHelpers.export(exports, "IJsonRpcHistory", ()=>h);
-parcelHelpers.export(exports, "IKeyChain", ()=>x);
-parcelHelpers.export(exports, "IMessageTracker", ()=>a);
-parcelHelpers.export(exports, "IPairing", ()=>m);
-parcelHelpers.export(exports, "IPublisher", ()=>u);
-parcelHelpers.export(exports, "IRelayer", ()=>g);
-parcelHelpers.export(exports, "ISignClient", ()=>b);
-parcelHelpers.export(exports, "ISignClientEvents", ()=>v);
-parcelHelpers.export(exports, "IStore", ()=>p);
-parcelHelpers.export(exports, "ISubscriber", ()=>d);
-parcelHelpers.export(exports, "ISubscriberTopicMap", ()=>I);
-parcelHelpers.export(exports, "IVerify", ()=>y);
-var _events = require("@walletconnect/events");
-var _events1 = require("events");
-var _eventsDefault = parcelHelpers.interopDefault(_events1);
-class n extends (0, _events.IEvents) {
-    constructor(s){
-        super(), this.opts = s, this.protocol = "wc", this.version = 2;
-    }
-}
-class l {
-    constructor(s, t, o){
-        this.core = s, this.logger = t;
-    }
-}
-class h extends (0, _events.IEvents) {
-    constructor(s, t){
-        super(), this.core = s, this.logger = t, this.records = new Map;
-    }
-}
-class a {
-    constructor(s, t){
-        this.logger = s, this.core = t;
-    }
-}
-class u extends (0, _events.IEvents) {
-    constructor(s, t){
-        super(), this.relayer = s, this.logger = t;
-    }
-}
-class g extends (0, _events.IEvents) {
-    constructor(s){
-        super();
-    }
-}
-class p {
-    constructor(s, t, o, w){
-        this.core = s, this.logger = t, this.name = o;
-    }
-}
-class I {
-    constructor(){
-        this.map = new Map;
-    }
-}
-class d extends (0, _events.IEvents) {
-    constructor(s, t){
-        super(), this.relayer = s, this.logger = t;
-    }
-}
-class x {
-    constructor(s, t){
-        this.core = s, this.logger = t;
-    }
-}
-class E extends (0, _events.IEvents) {
-    constructor(s, t){
-        super(), this.core = s, this.logger = t;
-    }
-}
-class m {
-    constructor(s, t){
-        this.logger = s, this.core = t;
-    }
-}
-class y {
-    constructor(s, t){
-        this.projectId = s, this.logger = t;
-    }
-}
-class v extends (0, _eventsDefault.default) {
-    constructor(){
-        super();
-    }
-}
-class b {
-    constructor(s){
-        this.opts = s, this.protocol = "wc", this.version = 2;
-    }
-}
-class C extends (0, _events1.EventEmitter) {
-    constructor(){
-        super();
-    }
-}
-class S {
-    constructor(s){
-        this.client = s;
-    }
-}
-
-},{"@walletconnect/events":"aO3HO","events":"1VQLm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"720YK":[function(require,module,exports) {
+},{}],"720YK":[function(require,module,exports) {
 // Taken from https://stackoverflow.com/a/41429145/2247097
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
