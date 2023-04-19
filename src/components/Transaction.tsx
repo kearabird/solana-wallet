@@ -23,10 +23,10 @@ interface trans{
 const createTrans = async (data: trans) => {
     let customConfig = {
         headers: {
-            'content-type': 'application/x-www-form-urlencoded',
+            'content-type': 'application/json',
         }
     };
-    const { data: response } = await axios.post('/api/transactions.json', querystring.stringify(data), customConfig);
+    const { data: response } = await axios.post('/api/transactions.json', data, customConfig);
     return response.data;
     
     };
